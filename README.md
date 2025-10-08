@@ -1,4 +1,4 @@
-# SME BI Dashboard (Malawi)
+# SME BI Dashboard 
 
 A professional, interactive Business Intelligence dashboard for Small and Medium Enterprises (SMEs) in Malawi. Built with Python, Streamlit, and Plotly, this dashboard empowers SME owners and analysts to visualize trends, monitor KPIs, and gain actionable insights from their sales and customer data.
 
@@ -174,5 +174,6 @@ For collaboration, feedback, or questions:
 ---
 
 _This dashboard is here to help SMEs in Malawi turn data into decisions that grow businesses sustainably._
+
 
 
