@@ -148,32 +148,7 @@ bi-dashboard-sme/
 
 ---
 
-## 🤝 Contribution
 
-Contributions are welcome!
-
-1. Fork the repo
-2. Create a branch (`git checkout -b feature-thing`)
-3. Commit changes (`git commit -m "Added something cool"`)
-4. Push (`git push origin feature-thing`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute.
-
----
-
-## 📬 Contact
-
-For collaboration, feedback, or questions:  
-📧 **mathiusmelo@gmail.com**
-
----
-
-_This dashboard is here to help SMEs in Malawi turn data into decisions that grow businesses sustainably._
 
 
 
