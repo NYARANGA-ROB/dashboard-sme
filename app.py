@@ -24,9 +24,9 @@ inject_css()
 
 # ========== DASHBOARD ==========
 def dashboard_page(df):
-    st.title("SME Business Intelligence Dashboard (Kenya)")
+    st.title("SME Business Intelligence Dashboard (Malawi)")
     st.markdown(
-        "<span style='font-size:1.1rem;'>Empowering SME owners in Kenya with clear, actionable data.</span>",
+        "<span style='font-size:1.1rem;'>Empowering SME owners in Malawi with clear, actionable data.</span>",
         unsafe_allow_html=True
     )
     st.markdown("---")
@@ -50,7 +50,6 @@ def dashboard_page(df):
         (df['Date'] >= pd.to_datetime(start_date)) &
         (df['Date'] <= pd.to_datetime(end_date))
     ]
-
     # KPIs
     st.subheader("Key Performance Indicators")
     render_kpis(calculate_kpis(filtered_df))
@@ -58,43 +57,19 @@ def dashboard_page(df):
 
     # Regional Sales and Gender Distribution side by side
     st.subheader("Regional Sales & Gender Distribution")
-    col1, col2 = st.columns([1.2, 1])
+    col1, col2 = st.columns([1.5, 1])
     with col1:
         fig_region = sales_by_region(filtered_df)
-        fig_region.update_layout(
-            autosize=False,
-            width=520, height=340,
-            margin=dict(l=10, r=10, t=40, b=10),
-            plot_bgcolor='white',
-            paper_bgcolor='white',
-            font=dict(color="#222")
-        )
-        st.plotly_chart(fig_region, use_container_width=False)
+        st.plotly_chart(fig_region, use_container_width=True)
     with col2:
         fig_gender = gender_pie(filtered_df)
-        fig_gender.update_layout(
-            autosize=False,
-            width=340, height=340,
-            margin=dict(l=10, r=10, t=40, b=10),
-            plot_bgcolor='white',
-            paper_bgcolor='white',
-            font=dict(color="#222")
-        )
-        st.plotly_chart(fig_gender, use_container_width=False)
+        st.plotly_chart(fig_gender, use_container_width=True)
     st.markdown("---")
 
     # Customer Age Distribution
     st.subheader("Customer Age Distribution")
     fig_age = age_distribution(filtered_df)
-    fig_age.update_layout(
-        autosize=False,
-        width=860, height=320,
-        margin=dict(l=10, r=10, t=40, b=10),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222")
-    )
-    st.plotly_chart(fig_age, use_container_width=False)
+    st.plotly_chart(fig_age, use_container_width=True)
     st.markdown("---")
 
     # Business Insight
@@ -113,32 +88,21 @@ def dashboard_page(df):
     churned = filtered_df.groupby('Customer ID')['Date'].max() < (last_date - pd.Timedelta(days=30))
     st.write("Churned Customers", churned.sum())
 
-    # Drilldown: click a region bar to see details
-    st.subheader("Drilldown: Sales by Region (Filtered)")
-    region_fig = sales_by_region(filtered_df)
-    region_fig.update_layout(
-        autosize=False,
-        width=600, height=340,
-        margin=dict(l=10, r=10, t=40, b=10),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222")
-    )
-    st.plotly_chart(region_fig, use_container_width=False)
 
     # Sales/profit by product
     st.subheader("Sales by Product")
     prod_sales = filtered_df.groupby('Product', as_index=False).agg({'Sales':'sum', 'Profit':'sum'})
-    fig_prod = px.bar(prod_sales, x='Product', y='Sales', color='Product', title='Sales by Product')
+    fig_prod = px.bar(prod_sales, x='Product', y='Sales', color='Product', title='Sales by Product', 
+                      color_discrete_sequence=['#2563eb', '#3b82f6', '#60a5fa', '#93c5fd', '#10b981'])
     fig_prod.update_layout(
-        autosize=False,
-        width=600, height=340,
-        margin=dict(l=10, r=10, t=40, b=10),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222")
+        plot_bgcolor='#ffffff',
+        paper_bgcolor='#ffffff',
+        font=dict(color='#1e293b', size=12),
+        xaxis=dict(tickfont=dict(color='#1e293b')),
+        yaxis=dict(tickfont=dict(color='#1e293b'), gridcolor='#e2e8f0'),
+        showlegend=False
     )
-    st.plotly_chart(fig_prod, use_container_width=False)
+    st.plotly_chart(fig_prod, use_container_width=True)
 
     # Top/bottom products
     top_products = prod_sales.sort_values('Sales', ascending=False).head(3)
@@ -158,14 +122,15 @@ def dashboard_page(df):
     st.subheader(f"Sales & Profit Over Time ({agg_option})")
     fig_time = px.line(time_df, x='Date', y=['Sales', 'Profit'], title=f'Sales & Profit Over Time ({agg_option})')
     fig_time.update_layout(
-        autosize=False,
-        width=860, height=320,
-        margin=dict(l=10, r=10, t=40, b=10),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222")
+        plot_bgcolor='#ffffff',
+        paper_bgcolor='#ffffff',
+        font=dict(color='#1e293b', size=12),
+        xaxis=dict(tickfont=dict(color='#1e293b')),
+        yaxis=dict(tickfont=dict(color='#1e293b'), gridcolor='#e2e8f0'),
+        legend=dict(font=dict(color='#1e293b'))
     )
-    st.plotly_chart(fig_time, use_container_width=False)
+    fig_time.update_traces(line=dict(width=3))
+    st.plotly_chart(fig_time, use_container_width=True)
 
     # Excel download for filtered data
     def to_excel(df):
@@ -202,24 +167,25 @@ def anomalies_page(df):
     fig = go.Figure()
     fig.add_trace(go.Scatter(
         x=df_anomaly['Date'], y=df_anomaly['Sales'],
-        mode='lines', name='Sales', line=dict(color='#064635')
+        mode='lines', name='Sales', line=dict(color='#2563eb', width=3)
     ))
     if not anomalies.empty:
         fig.add_trace(go.Scatter(
             x=anomalies['Date'], y=anomalies['Sales'],
             mode='markers', name='Anomalies',
-            marker=dict(color='red', size=10, symbol='x')
+            marker=dict(color='#ef4444', size=12, symbol='x', line=dict(width=2, color='#991b1b'))
         ))
 
     fig.update_layout(
-        autosize=False,
-        width=860, height=320,
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222"),
-        margin=dict(l=0, r=0, t=30, b=0)
+        plot_bgcolor='#ffffff',
+        paper_bgcolor='#ffffff',
+        font=dict(color='#1e293b', size=12),
+        xaxis=dict(tickfont=dict(color='#1e293b')),
+        yaxis=dict(tickfont=dict(color='#1e293b'), gridcolor='#e2e8f0'),
+        legend=dict(font=dict(color='#1e293b')),
+        height=400
     )
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 # ========== FORECASTING ==========
 def forecast_page(df):
@@ -236,26 +202,27 @@ def forecast_page(df):
     fig = go.Figure()
     fig.add_trace(go.Scatter(
         x=forecast['ds'], y=forecast['yhat'],
-        mode='lines', name='Forecast', line=dict(color='#064635')
+        mode='lines', name='Forecast', line=dict(color='#2563eb', width=3)
     ))
     fig.add_trace(go.Scatter(
         x=forecast['ds'], y=forecast['yhat_upper'],
-        mode='lines', name='Upper Bound', line=dict(color='#A9D6C1', dash='dash')
+        mode='lines', name='Upper Bound', line=dict(color='#93c5fd', dash='dash', width=2)
     ))
     fig.add_trace(go.Scatter(
         x=forecast['ds'], y=forecast['yhat_lower'],
-        mode='lines', name='Lower Bound', line=dict(color='#A9D6C1', dash='dash')
+        mode='lines', name='Lower Bound', line=dict(color='#93c5fd', dash='dash', width=2)
     ))
 
     fig.update_layout(
-        autosize=False,
-        width=860, height=320,
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222"),
-        margin=dict(l=0, r=0, t=30, b=0)
+        plot_bgcolor='#ffffff',
+        paper_bgcolor='#ffffff',
+        font=dict(color='#1e293b', size=12),
+        xaxis=dict(tickfont=dict(color='#1e293b')),
+        yaxis=dict(tickfont=dict(color='#1e293b'), gridcolor='#e2e8f0'),
+        legend=dict(font=dict(color='#1e293b')),
+        height=400
     )
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 # ========== SEGMENTATION ==========
 def segmentation_page(df):
@@ -276,25 +243,29 @@ def segmentation_page(df):
     fig = px.scatter(
         df_segmented, x='Customer Age', y='Sales',
         color='Segment',
-        color_discrete_sequence=px.colors.sequential.Greens,
-        hover_data=['Customer ID']
+        color_discrete_sequence=['#2563eb', '#10b981', '#f59e0b'],
+        hover_data=['Customer ID'],
+        title='Customer Segments'
     )
     fig.update_layout(
-        autosize=False,
-        width=860, height=320,
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        font=dict(color="#222"),
-        margin=dict(l=0, r=0, t=30, b=0)
+        plot_bgcolor='#ffffff',
+        paper_bgcolor='#ffffff',
+        font=dict(color='#1e293b', size=12),
+        title_font=dict(size=16, color='#1e293b'),
+        xaxis=dict(tickfont=dict(color='#1e293b')),
+        yaxis=dict(tickfont=dict(color='#1e293b'), gridcolor='#e2e8f0'),
+        legend=dict(font=dict(color='#1e293b')),
+        height=400
     )
-    st.plotly_chart(fig, use_container_width=False)
+    fig.update_traces(marker=dict(size=10, line=dict(width=1, color='white')))
+    st.plotly_chart(fig, use_container_width=True)
 
 # ========== FOOTER ==========
 def add_footer():
     st.markdown("""
         <hr style="margin-top: 2rem; margin-bottom: 1rem; border: none; border-top: 1px solid #e0e0e0;" />
         <div style="text-align: center; color: #666666; font-size: 0.85rem;">
-            SME BI Dashboard · Kenya · Clean. Clear. Data-Driven.
+            SME BI Dashboard · Malawi · Clean. Clear. Data-Driven.
         </div>
     """, unsafe_allow_html=True)
 
