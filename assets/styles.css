@@ -22,6 +22,34 @@ p, span, div {
   font-family: inherit;
 }
 
+/* Improve readability for all markdown/text blocks */
+.stMarkdown, .stText, .stCaption, .markdown-text-container, .stHeader, .stSubheader {
+  color: #222 !important;
+}
+
+/* Ensure placeholder/secondary text maintains contrast */
+::placeholder {
+  color: #444 !important;
+  opacity: 1 !important;
+}
+.stTextInput > div > input::placeholder {
+  color: #555 !important;
+}
+
+/* Strengthen contrast in sidebar widgets */
+.stSidebar .stRadio, .stSidebar .stSelectbox, .stSidebar .stDateInput, .stSidebar label, .stSidebar .stMarkdown {
+  color: #222 !important;
+}
+.stSidebar .stDateInput input, .stSidebar .stSelectbox div[role="combobox"], .stSidebar .stMultiselect div[role="combobox"] {
+  background-color: #ffffff !important;
+  color: #222 !important;
+}
+
+/* Ensure info/warning text is readable on light info backgrounds */
+.stAlert p, .stAlert span, .stAlert div {
+  color: #223 !important;
+}
+
 /* ========== Sidebar ========== */
 .stSidebar, .css-1d391kg, .css-1v3fvcr {
   background-color: #ffffff !important;
@@ -149,7 +177,7 @@ hr {
   background-color: #046326 !important;
   box-shadow: 0 4px 12px rgba(6,70,53,0.12);
 }
-.stTextInput > div > input, .stSelectbox > div, .stSlider > div {
+.stTextInput > div > input, .stSelectbox > div, .stSlider > div, .stMultiSelect > div {
   background-color: #f8f8f8 !important;
   color: #222 !important;
   border-radius: 0.4rem;
@@ -159,6 +187,33 @@ hr {
 }
 .stRadio > div, .stSelectbox > div, .stSlider > div {
   color: #222 !important;
+}
+
+/* Remove Streamlit default blue accents for selections/active states */
+.stSelectbox [data-baseweb="select"] div[aria-selected="true"],
+.stMultiSelect [data-baseweb="select"] div[aria-selected="true"],
+.stRadio div[role="radio"][aria-checked="true"] {
+  background-color: #E5F3EC !important; /* pale green */
+  color: #064635 !important;
+}
+.stSelectbox [data-baseweb="select"] div[role="option"]:hover,
+.stMultiSelect [data-baseweb="select"] div[role="option"]:hover {
+  background-color: #F2FBF7 !important;
+  color: #064635 !important;
+}
+
+/* Links, focus rings, and primary accents to green */
+a, .stMarkdown a, .stLink {
+  color: #0A6B4A !important;
+}
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid #0A6B4A !important;
+  outline-offset: 2px !important;
+}
+
+/* Checkbox and radio checked states */
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+  accent-color: #0A6B4A !important;
 }
 
 /* ========== Alerts & Info Boxes ========== */
