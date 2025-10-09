@@ -414,6 +414,14 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
   background-color: #eff6ff !important;
 }
 
+.stFileUploader label, .stFileUploader span, .stFileUploader p, .stFileUploader div {
+  color: var(--text-primary) !important;
+}
+
+.stFileUploader small {
+  color: var(--text-secondary) !important;
+}
+
 .stFileUploader div[role="button"] {
   background-color: var(--primary-color) !important;
   color: #ffffff !important;
