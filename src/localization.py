@@ -2,7 +2,7 @@
 
 translations = {
     "en": {
-        "currency_format": lambda value: f"MWK {value:,.0f}",
+        "currency_format": lambda value: f"KES {value:,.0f}",
         "total_sales": "Total Sales",
         "total_profit": "Total Profit",
         "profit_margin": "Profit Margin",
@@ -12,7 +12,7 @@ translations = {
         "gender_split": "Customer Gender Split"
     },
     "ny": {
-        "currency_format": lambda value: f"MK {value:,.0f}",
+        "currency_format": lambda value: f"KSh {value:,.0f}",
         "total_sales": "Malonda Yonse",
         "total_profit": "Phindu Lonse",
         "profit_margin": "Mphamvu ya Phindu",
