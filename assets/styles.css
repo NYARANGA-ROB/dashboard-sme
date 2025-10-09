@@ -162,20 +162,20 @@ hr {
 
 /* ========== Inputs & Buttons ========== */
 .stButton button, button {
-  background-color: #000 !important;
-  color: #fff !important;
+  background-color: #ffffff !important; /* White buttons */
+  color: #000 !important; /* Black text */
   border-radius: 0.5rem;
   padding: 0.6rem 1.2rem;
-  border: none;
+  border: 1px solid #cfcfcf !important;
   font-size: 1.05rem;
   font-weight: 600;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: none !important;
   letter-spacing: 0.01em;
 }
 .stButton button:hover, button:hover {
-  background-color: #111 !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background-color: #f7f7f7 !important;
+  box-shadow: none !important;
 }
 .stTextInput > div > input, .stSelectbox > div, .stSlider > div, .stMultiSelect > div {
   background-color: #ffffff !important; /* White inputs */
@@ -225,6 +225,22 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
   padding: 1.1rem !important;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   font-size: 1.05rem;
+}
+
+/* ========== File Uploader ========== */
+.stFileUploader, .stFileUploader > div, .stFileUploader div[role="button"], .stFileUploader label, .stFileUploader div[tabindex] {
+  background-color: #ffffff !important; /* White backgrounds */
+  color: #000 !important; /* Black text */
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+}
+.stFileUploader div[role="button"] {
+  background-color: #ffffff !important;
+  color: #000 !important;
+  border: 1px solid #cfcfcf !important;
+}
+.stFileUploader div[role="button"]:hover {
+  background-color: #f7f7f7 !important;
 }
 
 /* ========== Links ========== */
