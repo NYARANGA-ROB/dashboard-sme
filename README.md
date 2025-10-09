@@ -1,6 +1,6 @@
-# SME BI Dashboard 
+# SME BI Dashboard (Kenya)
 
-A professional, interactive Business Intelligence dashboard for Small and Medium Enterprises (SMEs) in Malawi. Built with Python, Streamlit, and Plotly, this dashboard empowers SME owners and analysts to visualize trends, monitor KPIs, and gain actionable insights from their sales and customer data.
+A professional, interactive Business Intelligence dashboard for Small and Medium Enterprises (SMEs) in Kenya. Built with Python, Streamlit, and Plotly, this dashboard empowers SME owners and analysts to visualize trends, monitor KPIs, and gain actionable insights from their sales and customer data.
 
 ---
 
@@ -46,7 +46,7 @@ A professional, interactive Business Intelligence dashboard for Small and Medium
 
 ## 📊 Overview
 
-SMEs in Malawi—whether a shop in Blantyre or a farm input dealer in Lilongwe—often lack access to robust analytical tools. This dashboard solves that with:
+SMEs in Kenya—whether a shop in Nairobi or a farm input dealer in Eldoret—often lack access to robust analytical tools. This dashboard solves that with:
 
 - Aggregated sales and customer data
 - Automated business insights in plain English
@@ -76,7 +76,7 @@ bi-dashboard-sme/
 │
 ├── assets/
 │ ├── styles.css # Custom styles
-│ └── region_map_malawi.png # (Optional) map asset
+│ └── region_map_kenya.png # (Optional) map asset
 │
 ├── requirements.txt
 ├── README.md
@@ -148,7 +148,31 @@ bi-dashboard-sme/
 
 ---
 
+## 🤝 Contribution
 
+Contributions are welcome!
 
+1. Fork the repo
+2. Create a branch (`git checkout -b feature-thing`)
+3. Commit changes (`git commit -m "Added something cool"`)
+4. Push (`git push origin feature-thing`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute.
+
+---
+
+## 📬 Contact
+
+For collaboration, feedback, or questions:  
+📧 **mathiusmelo@gmail.com**
+
+---
+
+_This dashboard is here to help SMEs in Kenya turn data into decisions that grow businesses sustainably._
 
 
