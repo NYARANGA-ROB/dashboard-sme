@@ -11,12 +11,12 @@ import pandas as pd
 
 
 def run_dashboard():
-    st.set_page_config(page_title="SME BI Dashboard (Malawi)", layout="wide", initial_sidebar_state="expanded")
+    st.set_page_config(page_title="SME BI Dashboard (Kenya)", layout="wide", initial_sidebar_state="expanded")
     inject_css()
 
-    st.title("SME Business Intelligence Dashboard (Malawi)")
+    st.title("SME Business Intelligence Dashboard (Kenya)")
     st.markdown(
-        "<span style='font-size:1.1rem;'>Visualize trends, monitor KPIs, and get data-driven insights for SMEs in Malawi.</span>",
+        "<span style='font-size:1.1rem;'>Visualize trends, monitor KPIs, and get data-driven insights for SMEs in Kenya.</span>",
         unsafe_allow_html=True
     )
     st.markdown("---")
