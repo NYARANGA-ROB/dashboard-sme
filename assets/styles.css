@@ -2,8 +2,8 @@
 
 /* ========== Global Styles ========== */
 body, .block-container, .main {
-  background-color: #f7f9fa !important; /* Subtle off-white for less eye strain */
-  color: #222 !important;
+  background-color: #ffffff !important; /* Pure white background */
+  color: #000 !important; /* Pure black text */
   font-family: 'Segoe UI', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -12,13 +12,13 @@ body, .block-container, .main {
 
 /* ========== Headings & Text ========== */
 h1, h2, h3, h4, h5, h6 {
-  color: #064635 !important; /* Industry green for headings */
+  color: #000 !important; /* Black headings */
   font-family: inherit;
   font-weight: 700;
   letter-spacing: 0.01em;
 }
 p, span, div {
-  color: #222 !important;
+  color: #000 !important;
   font-family: inherit;
 }
 
@@ -52,13 +52,13 @@ p, span, div {
 
 /* ========== Sidebar ========== */
 .stSidebar, .css-1d391kg, .css-1v3fvcr {
-  background-color: #ffffff !important;
-  color: #222 !important;
+  background-color: #ffffff !important; /* White sidebar */
+  color: #000 !important; /* Black text */
   border-right: 1px solid #e0e0e0;
   box-shadow: 2px 0 8px rgba(0,0,0,0.03);
 }
 .stSidebar h1, .stSidebar h2, .stSidebar .css-1v3fvcr, .css-1d391kg h1 {
-  color: #064635 !important;
+  color: #000 !important;
   font-weight: 700;
 }
 
@@ -66,15 +66,15 @@ p, span, div {
 .stSidebar .stButton button,
 .stSidebar button,
 .stSidebar .stDownloadButton button {
-  background-color: #064635 !important;
-  color: #fff !important;
+  background-color: #000 !important; /* Black buttons */
+  color: #fff !important; /* White text */
   border-radius: 0.5rem;
   padding: 0.6rem 1.2rem;
   border: none;
   font-size: 1.05rem;
   font-weight: 600;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 6px rgba(6,70,53,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   letter-spacing: 0.01em;
   text-align: left !important; /* Align text to the left for sidebar */
 }
@@ -82,34 +82,34 @@ p, span, div {
 .stSidebar .stButton button:hover,
 .stSidebar button:hover,
 .stSidebar .stDownloadButton button:hover {
-  background-color: #046326 !important;
-  box-shadow: 0 4px 12px rgba(6,70,53,0.12);
+  background-color: #111 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* ========== Metric Cards ========== */
 .metric-container, .stMetric {
-  background-color: #fff !important;
+  background-color: #fff !important; /* White cards */
   border-radius: 0.75rem;
   padding: 1.2rem 1rem;
   margin-bottom: 1.2rem;
-  box-shadow: 0 2px 8px rgba(6,70,53,0.07);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   text-align: center;
-  color: #222 !important;
+  color: #000 !important;
   border: 1px solid #e0e0e0;
 }
 .stMetricLabel {
-  color: #666 !important;
+  color: #333 !important;
   font-size: 1rem;
 }
 .stMetricValue {
-  color: #064635 !important;
+  color: #000 !important;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 /* ========== Section Headers ========== */
 .section-header {
-  color: #064635 !important;
+  color: #000 !important;
   font-size: 1.25rem;
   font-weight: 700;
   margin-top: 2rem;
@@ -126,11 +126,11 @@ hr {
 /* ========== Tables (st.dataframe) ========== */
 .stDataFrame, .css-1p8u58t, .css-hi6a2p {
   background-color: #fff !important;
-  color: #222 !important;
+  color: #000 !important;
   border-radius: 0.5rem;
   font-size: 0.95rem;                /* Slightly smaller for desktop fit */
   padding: 0.25rem !important;        /* Less padding for compactness */
-  box-shadow: 0 1px 4px rgba(6,70,53,0.07);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
   border: 1px solid #e0e0e0;
   max-width: 1100px;                  /* Limit table width for desktop */
   margin-left: auto;
@@ -145,9 +145,9 @@ hr {
 /* ========== Charts (Plotly) ========== */
 .stPlotlyChart > div {
   background-color: #fff !important;
-  color: #222 !important;
+  color: #000 !important;
   border-radius: 0.75rem !important;
-  box-shadow: 0 2px 8px rgba(6,70,53,0.07) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07) !important;
   padding: 0.25rem !important;         /* Less padding for compactness */
   border: 1px solid #e0e0e0;
   max-width: 1100px;                   /* Limit chart width for desktop */
@@ -162,7 +162,7 @@ hr {
 
 /* ========== Inputs & Buttons ========== */
 .stButton button, button {
-  background-color: #064635 !important;
+  background-color: #000 !important;
   color: #fff !important;
   border-radius: 0.5rem;
   padding: 0.6rem 1.2rem;
@@ -170,60 +170,60 @@ hr {
   font-size: 1.05rem;
   font-weight: 600;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 6px rgba(6,70,53,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   letter-spacing: 0.01em;
 }
 .stButton button:hover, button:hover {
-  background-color: #046326 !important;
-  box-shadow: 0 4px 12px rgba(6,70,53,0.12);
+  background-color: #111 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 .stTextInput > div > input, .stSelectbox > div, .stSlider > div, .stMultiSelect > div {
-  background-color: #f8f8f8 !important;
-  color: #222 !important;
+  background-color: #ffffff !important; /* White inputs */
+  color: #000 !important;
   border-radius: 0.4rem;
   border: 1px solid #e0e0e0 !important;
   font-size: 1rem;
   padding: 0.5rem 0.75rem;
 }
 .stRadio > div, .stSelectbox > div, .stSlider > div {
-  color: #222 !important;
+  color: #000 !important;
 }
 
 /* Remove Streamlit default blue accents for selections/active states */
 .stSelectbox [data-baseweb="select"] div[aria-selected="true"],
 .stMultiSelect [data-baseweb="select"] div[aria-selected="true"],
 .stRadio div[role="radio"][aria-checked="true"] {
-  background-color: #E5F3EC !important; /* pale green */
-  color: #064635 !important;
+  background-color: transparent !important; /* No fill */
+  color: #000 !important;
 }
 .stSelectbox [data-baseweb="select"] div[role="option"]:hover,
 .stMultiSelect [data-baseweb="select"] div[role="option"]:hover {
-  background-color: #F2FBF7 !important;
-  color: #064635 !important;
+  background-color: #f5f5f5 !important; /* Light grey hover */
+  color: #000 !important;
 }
 
 /* Links, focus rings, and primary accents to green */
 a, .stMarkdown a, .stLink {
-  color: #0A6B4A !important;
+  color: #000 !important; /* Black links */
 }
 a:focus, button:focus, input:focus, select:focus, textarea:focus {
-  outline: 2px solid #0A6B4A !important;
+  outline: 2px solid #000 !important;
   outline-offset: 2px !important;
 }
 
 /* Checkbox and radio checked states */
 input[type="checkbox"]:checked, input[type="radio"]:checked {
-  accent-color: #0A6B4A !important;
+  accent-color: #000 !important; /* Black accent */
 }
 
 /* ========== Alerts & Info Boxes ========== */
 .stAlert, .css-1t8l2tu, .css-1w7v3tn {
-  background-color: #eafaf1 !important;
-  border-left: 5px solid #064635 !important;
-  color: #222 !important;
+  background-color: #ffffff !important; /* White info boxes */
+  border-left: 5px solid #000000 !important; /* Black accent */
+  color: #000 !important;
   border-radius: 0.5rem;
   padding: 1.1rem !important;
-  box-shadow: 0 1px 4px rgba(6,70,53,0.05);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   font-size: 1.05rem;
 }
 
@@ -241,8 +241,8 @@ a:hover, .stMarkdown a:hover, .stLink:hover {
 
 /* ========== Footer ========== */
 footer, .footer {
-  color: #666 !important;
-  background: transparent !important;
+  color: #000 !important;
+  background: #ffffff !important;
   font-size: 0.95rem;
   text-align: center;
   margin-top: 2rem;
@@ -254,9 +254,9 @@ footer, .footer {
 /* ========== Misc ========== */
 ::-webkit-scrollbar {
   width: 10px;
-  background: #f7f9fa;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e0e0e0;
+  background: #cfcfcf;
   border-radius: 5px;
 }
