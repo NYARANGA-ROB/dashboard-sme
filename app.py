@@ -24,9 +24,9 @@ inject_css()
 
 # ========== DASHBOARD ==========
 def dashboard_page(df):
-    st.title("SME Business Intelligence Dashboard (Malawi)")
+    st.title("SME Business Intelligence Dashboard (Kenya)")
     st.markdown(
-        "<span style='font-size:1.1rem;'>Empowering SME owners in Malawi with clear, actionable data.</span>",
+        "<span style='font-size:1.1rem;'>Empowering SME owners in Kenya with clear, actionable data.</span>",
         unsafe_allow_html=True
     )
     st.markdown("---")
@@ -294,7 +294,7 @@ def add_footer():
     st.markdown("""
         <hr style="margin-top: 2rem; margin-bottom: 1rem; border: none; border-top: 1px solid #e0e0e0;" />
         <div style="text-align: center; color: #666666; font-size: 0.85rem;">
-            SME BI Dashboard · Malawi · Clean. Clear. Data-Driven.
+            SME BI Dashboard · Kenya · Clean. Clear. Data-Driven.
         </div>
     """, unsafe_allow_html=True)
 
