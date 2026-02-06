@@ -169,10 +169,11 @@ MIT License — free to use, modify, and distribute.
 ## 📬 Contact
 
 For collaboration, feedback, or questions:  
-📧 **mathiusmelo@gmail.com**
+📧 **nyarangaro@gmail.com**
 
 ---
 
 _This dashboard is here to help SMEs in Kenya turn data into decisions that grow businesses sustainably._
+
 
 
