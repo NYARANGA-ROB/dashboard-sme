@@ -6,6 +6,7 @@ A professional, interactive Business Intelligence dashboard for Small and Medium
 
 ## 🚀 Features
 
+
 - **Data Upload & Download**  
   Upload your own CSV data and download filtered/analyzed data as CSV or Excel.
 
