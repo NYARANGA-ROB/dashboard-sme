@@ -137,6 +137,7 @@ bi-dashboard-sme/
 
 ---
 
+
 ## 📈 Usage
 
 - **Dashboard:** View KPIs, charts, and automatic business insights.
