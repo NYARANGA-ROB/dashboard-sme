@@ -6,6 +6,7 @@ import io
 import xlsxwriter
 
 from src.data_loader import load_data
+
 from src.kpis import calculate_kpis
 
 from src.visuals import sales_by_region, age_distribution, gender_pie
