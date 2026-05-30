@@ -32,7 +32,6 @@ def dashboard_page(df):
     st.markdown("---")
 
     # Sidebar filters
-    
     regions = df['Region'].unique()
     
     products = df['Product'].unique()
