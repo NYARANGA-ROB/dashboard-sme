@@ -44,6 +44,7 @@ def dashboard_page(df):
     selected_products = st.sidebar.multiselect("Filter by Product", products, default=list(products))
     
     date_range = st.sidebar.date_input("Date Range", [date_min, date_max])
+    
     if isinstance(date_range, tuple) or isinstance(date_range, list):
         start_date, end_date = date_range[0], date_range[-1]
     else:
