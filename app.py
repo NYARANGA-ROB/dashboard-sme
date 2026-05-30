@@ -40,6 +40,7 @@ def dashboard_page(df):
     date_min, date_max = df['Date'].min(), df['Date'].max()
 
     selected_regions = st.sidebar.multiselect("Filter by Region", regions, default=list(regions))
+    
     selected_products = st.sidebar.multiselect("Filter by Product", products, default=list(products))
     date_range = st.sidebar.date_input("Date Range", [date_min, date_max])
     if isinstance(date_range, tuple) or isinstance(date_range, list):
