@@ -33,7 +33,6 @@ def dashboard_page(df):
 
     # Sidebar filters
     regions = df['Region'].unique()
-    
     products = df['Product'].unique()
     
     date_min, date_max = df['Date'].min(), df['Date'].max()
