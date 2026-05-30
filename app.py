@@ -9,7 +9,6 @@ from src.data_loader import load_data
 from src.kpis import calculate_kpis
 from src.visuals import sales_by_region, age_distribution, gender_pie
 from src.insights import generate_insight
-
 from src.ui import inject_css, render_kpis
 from src.anomaly_detection import detect_sales_anomalies
 from src.forecasting import forecast_sales
