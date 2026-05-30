@@ -72,6 +72,7 @@ def dashboard_page(df):
     st.markdown("---")
 
     # Business Insight
+    
     st.subheader("Business Insight")
     st.info(generate_insight(filtered_df))
     st.markdown("---")
