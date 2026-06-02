@@ -16,6 +16,7 @@ from src.insights import generate_insight
 from src.ui import inject_css, render_kpis
 
 from src.anomaly_detection import detect_sales_anomalies
+
 from src.forecasting import forecast_sales
 from src.customer_segmentation import segment_customers
 
