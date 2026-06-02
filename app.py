@@ -8,7 +8,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 import io
-
 import xlsxwriter
 
 from src.data_loader import load_data
