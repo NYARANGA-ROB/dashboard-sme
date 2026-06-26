@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.ensemble import IsolationForest
-
 def detect_sales_anomalies(df, contamination=0.05):
     """
     Detect anomalies in sales data using Isolation Forest.
