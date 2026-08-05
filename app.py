@@ -59,6 +59,7 @@ def dashboard_page(df):
     # Regional Sales and Gender Distribution side by side
     st.subheader("Regional Sales & Gender Distribution")
     col1, col2 = st.columns([1.5, 1])
+    
     with col1:
         fig_region = sales_by_region(filtered_df)
         st.plotly_chart(fig_region, use_container_width=True)
