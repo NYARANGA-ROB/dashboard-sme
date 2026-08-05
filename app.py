@@ -46,6 +46,7 @@ def dashboard_page(df):
 
     filtered_df = df[
         (df['Region'].isin(selected_regions)) &
+    
         (df['Product'].isin(selected_products)) &
         (df['Date'] >= pd.to_datetime(start_date)) &
         (df['Date'] <= pd.to_datetime(end_date))
