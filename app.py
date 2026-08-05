@@ -31,7 +31,6 @@ def dashboard_page(df):
         unsafe_allow_html=True
     )
     st.markdown("---")
-
     # Sidebar filters
     regions = df['Region'].unique()
     
