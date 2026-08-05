@@ -55,7 +55,6 @@ def dashboard_page(df):
     st.subheader("Key Performance Indicators")
     render_kpis(calculate_kpis(filtered_df))
     st.markdown("---")
-
     # Regional Sales and Gender Distribution side by side
     st.subheader("Regional Sales & Gender Distribution")
     col1, col2 = st.columns([1.5, 1])
