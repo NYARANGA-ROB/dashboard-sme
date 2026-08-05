@@ -83,6 +83,7 @@ def dashboard_page(df):
     # Repeat vs. new customers
     filtered_df = filtered_df.sort_values('Date')
     filtered_df['Is New Customer'] = ~filtered_df['Customer ID'].duplicated()
+    
     repeat_count = filtered_df['Is New Customer'].value_counts()
     st.write("New vs. Repeat Customers", repeat_count)
 
