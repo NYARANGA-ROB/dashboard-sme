@@ -155,6 +155,7 @@ def dashboard_page(df):
         mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     )
 
+
 # ========== ANOMALY DETECTION ==========
 def anomalies_page(df):
     st.title("Real-Time Sales Anomaly Detection")
