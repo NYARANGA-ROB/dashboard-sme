@@ -6,6 +6,7 @@ def detect_sales_anomalies(df, contamination=0.05):
     Assumes df has columns: 'Date', 'Sales'.
     Returns df with an additional 'Anomaly' boolean column.
     """
+    
     if df.empty or 'Sales' not in df.columns:
         raise ValueError("DataFrame must contain 'Sales' column and not be empty.")
 
