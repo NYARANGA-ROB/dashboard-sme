@@ -277,7 +277,6 @@ def add_footer():
             SME BI Dashboard · Malawi · Clean. Clear. Data-Driven.
         </div>
     """, unsafe_allow_html=True)
-
 # ========== MAIN ==========
 def main():
     st.sidebar.title("SME Dashboard")
