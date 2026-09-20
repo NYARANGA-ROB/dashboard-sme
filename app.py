@@ -71,6 +71,7 @@ def dashboard_page(df):
         st.plotly_chart(fig_gender, use_container_width=True)
     st.markdown("---")
 
+    
     # Customer Age Distribution
     st.subheader("Customer Age Distribution")
     
