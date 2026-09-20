@@ -197,6 +197,7 @@ def anomalies_page(df):
     )
     st.plotly_chart(fig, use_container_width=True)
 
+
 # ========== FORECASTING ==========
 def forecast_page(df):
     st.title("Sales Forecasting")
