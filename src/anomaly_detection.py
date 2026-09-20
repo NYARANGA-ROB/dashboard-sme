@@ -8,6 +8,7 @@ def detect_sales_anomalies(df, contamination=0.05):
     """
     
     if df.empty or 'Sales' not in df.columns:
+        
         raise ValueError("DataFrame must contain 'Sales' column and not be empty.")
 
     df_sorted = df.sort_values('Date').copy()
