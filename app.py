@@ -248,7 +248,6 @@ def segmentation_page(df):
     if 'Customer ID' not in df.columns:
         df = df.copy()
         df['Customer ID'] = df.index + 1
-
     df_segmented = segment_customers(df)
 
     fig = px.scatter(
