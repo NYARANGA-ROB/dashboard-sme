@@ -185,7 +185,6 @@ def anomalies_page(df):
             mode='markers', name='Anomalies',
             marker=dict(color='#ef4444', size=12, symbol='x', line=dict(width=2, color='#991b1b'))
         ))
-
     fig.update_layout(
         plot_bgcolor='#ffffff',
         paper_bgcolor='#ffffff',
