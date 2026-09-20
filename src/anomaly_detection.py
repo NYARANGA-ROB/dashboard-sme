@@ -14,6 +14,7 @@ def detect_sales_anomalies(df, contamination=0.05):
     df_sorted = df.sort_values('Date').copy()
     
     model = IsolationForest(contamination=contamination, random_state=42)
+    
     df_sorted['Anomaly'] = model.fit_predict(df_sorted[['Sales']])
     df_sorted['Anomaly'] = df_sorted['Anomaly'] == -1
     return df_sorted
