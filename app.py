@@ -55,6 +55,7 @@ def dashboard_page(df):
         (df['Date'] >= pd.to_datetime(start_date)) &
         (df['Date'] <= pd.to_datetime(end_date))
     ]
+    
     # KPIs
     st.subheader("Key Performance Indicators")
     render_kpis(calculate_kpis(filtered_df))
