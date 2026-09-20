@@ -306,7 +306,6 @@ def main():
         file_name='filtered_data.csv',
         mime='text/csv'
     )
-
     if df is None or df.empty:
         st.error("No data loaded. Please check your data source.")
         return
