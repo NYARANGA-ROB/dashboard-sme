@@ -46,6 +46,7 @@ def dashboard_page(df):
         start_date, end_date = date_range[0], date_range[-1]
     else:
         start_date = end_date = date_range
+        
 
     filtered_df = df[
         (df['Region'].isin(selected_regions)) &
