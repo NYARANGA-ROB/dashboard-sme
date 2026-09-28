@@ -104,6 +104,7 @@ def run_dashboard():
             df.to_excel(writer, index=False, sheet_name='Sheet1')
         return output.getvalue()
 
+    
     st.sidebar.download_button(
         label="Download Filtered Data as Excel",
         data=to_excel(filtered_df),
