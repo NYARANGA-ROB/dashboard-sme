@@ -91,7 +91,6 @@ def dashboard_page(df):
     churned = filtered_df.groupby('Customer ID')['Date'].max() < (last_date - pd.Timedelta(days=30))
     st.write("Churned Customers", churned.sum())
 
-
     # Sales/profit by product
     st.subheader("Sales by Product")
     prod_sales = filtered_df.groupby('Product', as_index=False).agg({'Sales':'sum', 'Profit':'sum'})
