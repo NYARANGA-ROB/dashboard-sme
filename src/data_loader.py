@@ -6,7 +6,6 @@ def load_data(path="data/sample_sales_data.csv"):
     Load sales data from a CSV file.
     Args:
         path (str): Path to the CSV file.
-
     Returns:
         pd.DataFrame: Loaded DataFrame, or empty DataFrame if file not found.
     """
