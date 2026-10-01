@@ -1,6 +1,5 @@
 import pandas as pd
 from prophet import Prophet
-
 def forecast_sales(df, periods=30):
     """
     Forecast future sales using Prophet.
