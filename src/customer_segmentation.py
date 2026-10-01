@@ -14,7 +14,6 @@ def segment_customers(df, n_clusters=3):
     features = df[['Customer Age', 'Sales']].copy()
     scaler = StandardScaler()
     features_scaled = scaler.fit_transform(features)
-
     kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
     df = df.copy()
     df['Segment'] = kmeans.fit_predict(features_scaled)
