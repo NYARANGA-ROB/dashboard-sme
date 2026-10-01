@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import random
 import os
 
+
 def generate_sample_data(output_path="data/sample_sales_data.csv", num_days=100):
     """
     Generate sample sales data for the SME BI Dashboard.
