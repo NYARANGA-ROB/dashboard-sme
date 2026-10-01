@@ -1,5 +1,4 @@
 # src/localization.py
-
 translations = {
     "en": {
         "currency_format": lambda value: f"KES {value:,.0f}",
