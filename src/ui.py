@@ -1,6 +1,5 @@
 import streamlit as st
 from src.localization import format_currency
-
 def inject_css():
     """Inject custom CSS for consistent app styling."""
     try:
