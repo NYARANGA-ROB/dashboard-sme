@@ -1,5 +1,4 @@
 import plotly.express as px
-
 # Modern color palette matching the dashboard theme
 COLOR_PALETTE = ['#2563eb', '#3b82f6', '#60a5fa', '#93c5fd', '#10b981', '#34d399', '#f59e0b', '#fbbf24']
 
