@@ -1,5 +1,4 @@
 from src.localization import format_currency
-
 def generate_insight(df):
     """Generate a simple business insight based on regional sales."""
     if df.empty or "Region" not in df.columns or "Sales" not in df.columns:
