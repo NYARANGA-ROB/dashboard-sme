@@ -1,5 +1,4 @@
 # src/dashboard.py
-
 import streamlit as st
 from src.data_loader import load_data
 from src.kpis import calculate_kpis
