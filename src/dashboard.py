@@ -9,6 +9,7 @@ from src.ui import inject_css, render_kpis, section_header
 import io
 import pandas as pd
 
+
 def run_dashboard():
     st.set_page_config(page_title="SME BI Dashboard (Kenya)", layout="wide", initial_sidebar_state="expanded")
     inject_css()
