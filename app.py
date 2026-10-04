@@ -21,6 +21,7 @@ st.set_page_config(
 )
 inject_css()
 
+
 # ========== DASHBOARD ==========
 def dashboard_page(df):
     st.title("SME Business Intelligence Dashboard (Malawi)")
